@@ -1,0 +1,10 @@
+<div id='content' ng-controller='GameController as ctrl'>
+	<div>{{"Urinishlar soni: " + ctrl.countAttempt}}</div>
+	<div id="game-container">
+		<div class="tile-container">
+			<button class="tile" ng-repeat="tile in ctrl.tiles track by $index" ng-click="ctrl.game($index)">
+				{{ tile.value }}
+			</button>
+		</div>
+	</div>
+</div>
